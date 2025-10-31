@@ -17,4 +17,9 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    public void OnACellClicked()
+    {
+        // We check, if game is ENDED or NOT
+    }
 }
