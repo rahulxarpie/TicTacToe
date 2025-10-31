@@ -41,4 +41,12 @@ public class CellManager : MonoBehaviour
     }
 
     public CellState GetCellState() => currCellState;
+
+    public void ResetForNewGame()
+    {
+        currCellState = CellState.EMPTY;
+        xImage.gameObject.SetActive(false);
+        oImage.gameObject.SetActive(false);
+        button.interactable = true;
+    }
 }
