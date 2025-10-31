@@ -9,6 +9,8 @@ public class CellManager : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
 
+    private CellState currCellState = CellState.EMPTY;
+
     private void Awake()
     {
         xImage.gameObject.SetActive(false);
@@ -24,13 +26,19 @@ public class CellManager : MonoBehaviour
         {
             xImage.gameObject.SetActive(true);
             oImage.gameObject.SetActive(false);
+            currCellState = CellState.X;
         }
         else
         {
+            currCellState = CellState.O;
             oImage.gameObject.SetActive(true);
             xImage.gameObject.SetActive(false);
         }
 
         button.interactable = false;
+
+        gameManager.OnACellClicked();
     }
+
+    public CellState GetCellState() => currCellState;
 }
