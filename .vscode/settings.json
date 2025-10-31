@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TicTacToe.slnx"
+    "dotnet.defaultSolution": "TicTacToe.slnx",
+    "editor.formatOnSave": true
 }
